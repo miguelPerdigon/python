@@ -13,6 +13,7 @@ recipients = ['email1@server.com', 'email2@server.com']
 cc = ['email3@server.com']
 file_buffer = BytesIO()
 
+# is a dict to save several files of different types, key is the name file and the value is the buffer
 attached = {
     'book.xlsx': file_buffer,
     'book.csv': file_buffer
