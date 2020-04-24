@@ -5,6 +5,7 @@
 import pandas as pd
 from io import BytesIO
 from utils.constant import NORMAL_CELL_STYLE
+from logging import error
 
 
 def generate(data_file_list, name_sheets, header_style=None):
@@ -28,3 +29,12 @@ def generate(data_file_list, name_sheets, header_style=None):
 
     writer.save()
     return file_buffer
+
+
+def read_sheet(path_file, name_sheet):
+    try:
+        df = pd.read_excel(path_file, sheet_name=name_sheet)
+        return df
+
+    except Exception as e:
+        error(str(e))
