@@ -8,5 +8,5 @@ data_file = {
 
 file_buffer = csv_manager.generate_buffer(data_file, list(data_file.keys()), ',')
 
-storage_manager = Storage('project_name', 'bucket_name')
+storage_manager = Storage('project_id', 'bucket_name')
 storage_manager.up(file_buffer, 'folder_name', 'file_name.csv')

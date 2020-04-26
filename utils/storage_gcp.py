@@ -3,8 +3,8 @@ from logging import error
 
 
 class Storage:
-    def __init__(self, project_name_gcp, bucket_name):
-        client = storage.Client(project_name_gcp)
+    def __init__(self, project_id_gcp, bucket_name):
+        client = storage.Client(project_id_gcp)
         bucket = client.get_bucket(bucket_name)
         self.bucket = bucket
 
